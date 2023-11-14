@@ -60,7 +60,7 @@
     "@web/dev-server": "0.4.1",
     "@web/test-runner": "0.18.0",
     "eslint": "8.53.0",
-    "i18next": "21.3.3",
+    "i18next": "21.10.0",
     "lint-staged": "15.1.0",
     "prettier": "3.1.0",
     "prettier-package-json": "2.8.0",
