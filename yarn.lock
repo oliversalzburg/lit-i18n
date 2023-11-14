@@ -50,7 +50,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.0":
+"@babel/runtime@npm:^7.17.2":
   version: 7.23.2
   resolution: "@babel/runtime@npm:7.23.2"
   dependencies:
@@ -235,7 +235,7 @@ __metadata:
     "@web/dev-server": "npm:0.4.1"
     "@web/test-runner": "npm:0.18.0"
     eslint: "npm:8.53.0"
-    i18next: "npm:21.3.3"
+    i18next: "npm:21.10.0"
     lint-staged: "npm:15.1.0"
     lit-html: "npm:3.0.2"
     prettier: "npm:3.1.0"
@@ -2697,12 +2697,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.3.3":
-  version: 21.3.3
-  resolution: "i18next@npm:21.3.3"
+"i18next@npm:21.10.0":
+  version: 21.10.0
+  resolution: "i18next@npm:21.10.0"
   dependencies:
-    "@babel/runtime": "npm:^7.12.0"
-  checksum: 5ba58a660eb1c5fd290be7cc152b1622b82e047d1a2f18a4f911cc8d0bc58252683e502df4b8e88893da935f78c425d6a53865b68bb3ba1589d86c02ec380dd1
+    "@babel/runtime": "npm:^7.17.2"
+  checksum: 2a674739aab219704d5a0bf62d03bed20ad2bceff9579efb4da61c4946c883fc172062ba7405a26bf795995860f2ab15826b05271f4c457bf7eb19e852f6006d
   languageName: node
   linkType: hard
 
