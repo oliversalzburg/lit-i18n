@@ -138,7 +138,7 @@ class TranslateWhen extends TranslateBase {
 /**
  * The translate directive
  * @example
- * import { translate as t, i18next, html, render } from 'lit-i18n/source/lit-i18n.js';
+ * import { translate as t, i18next, html, render } from '@oliversalzburg/lit-i18n/lib/lit-i18n.js';
  * i18next.init({...i18next config...});
  * class MyElement extends HTMLElement {
  *     connectedCallback() {
@@ -161,7 +161,7 @@ export const translate = directive(Translate);
 /**
  * Can be used like translate but it also takes a Promise. This can be used if you can't guarantee if the i18next resource bundle is loaded.
  * @example
- * import { translateWhen } from 'lit-i18n/source/lit-i18n.js';
+ * import { translateWhen } from '@oliversalzburg/lit-i18n/lib/lit-i18n.js';
  * const initializeI18next = i18next.use(someBackend).init(....);
  * const translateDirective = (keys, options) => translateWhen(initializeI18next, keys, options);
  * // Now you can use translateDirective in your lit-html templates.

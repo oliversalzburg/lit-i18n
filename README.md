@@ -1,16 +1,14 @@
-# lit-i18n
+# @oliversalzburg/lit-i18n
 
 i18next lit-html directive (could possible add other i18n backends).
 
-[![Build Status](https://dev.azure.com/colscott/lit-i18n/_apis/build/status/colscott.lit-i18n?branchName=master)](https://dev.azure.com/colscott/lit-i18n/_build/latest?definitionId=2&branchName=master)
-
 ## Install
 
-    npm install lit-i18n
+```shell
+yarn add @oliversalzburg/lit-i18n
+```
 
 ## Usage
-
-Note: this library uses lit-html 2. If you use lit-html 1.x.x then please use lit-i18n 2.x.x.
 
 ### Config
 
@@ -45,7 +43,7 @@ The translate directive has the same signature and functionality as the i18next 
 #### translate
 
 ```js
-import { translate as t, html, render } from "lit-i18n/source/lit-i18n.js";
+import { translate as t, html, render } from "@oliversalzburg/lit-i18n/lib/lit-i18n.js";
 
 /** @typedef {{name: string; age: number; male: boolean}} Person */
 class I18nElement extends HTMLElement {
@@ -94,7 +92,7 @@ If this happens you can use `translateWhen`.
 Passing the Promise every single time you call the directive can get a little much so you can wrap the directive and call the wrapper instead, like this:
 
 ```js
-import { translateWhen } from 'lit-i18n/source/lit-i18n.js';
+import { translateWhen } from '@oliversalzburg/lit-i18n/lib/lit-i18n.js';
 
 const initializePromise = i18next.use(someBackend).init(....);
 const translateDirective = (keys, options) => translateWhen(initializePromise, keys, options);

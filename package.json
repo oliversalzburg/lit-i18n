@@ -43,6 +43,7 @@
     "test:unit": "web-test-runner \"test/unit/**/*.js\" --node-resolve --preserve-symlinks",
     "test:watch": "yarn run test:unit -- --watch"
   },
+  "types": "./lib/index.d.ts",
   "dependencies": {
     "lit-html": "3.0.2"
   },
