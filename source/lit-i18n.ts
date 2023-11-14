@@ -1,11 +1,9 @@
-import { i18n } from "i18next";
+import i18next, { i18n } from "i18next";
 import { html, noChange, render, svg } from "lit-html";
 import { AsyncDirective, directive } from "lit-html/async-directive.js";
 import { PartInfo } from "lit-html/directive.js";
 
-export { html, svg, render };
-
-declare let i18next: i18n;
+export { html, render, svg };
 
 /**
  * Used to keep track of Parts that need to be updated should the language change.

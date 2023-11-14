@@ -1,7 +1,7 @@
-/* global i18next, describe, before, after, it */
+/* global describe, before, after, it */
 /* Jasmine will be loaded by the test framework. No need to import it. */
 import { expect } from "@esm-bundle/chai";
-import "i18next/i18next.js";
+import i18next from "i18next";
 import "lit-html";
 import { html, registry, render, translate as t } from "../../lib/lit-i18n.js";
 
