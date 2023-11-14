@@ -31,7 +31,7 @@
     "test:watch": "npm run test:unit -- --watch"
   },
   "dependencies": {
-    "lit-html": "2.8.0"
+    "lit-html": "3.0.2"
   },
   "peerDependencies": {
     "i18next": "^21.3.3"
