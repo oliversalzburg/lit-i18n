@@ -1,5 +1,7 @@
 # @oliversalzburg/lit-i18n
 
+> Forked from <https://github.com/colscott/lit-i18n>, as that package seems to be no longer maintained.
+
 i18next lit-html directive (could possible add other i18n backends).
 
 ## Install
