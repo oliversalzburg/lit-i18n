@@ -229,6 +229,7 @@ __metadata:
     "@esm-bundle/chai": "npm:4.3.4"
     "@types/eslint": "npm:8.44.7"
     "@types/node": "npm:20.9.0"
+    "@types/web": "npm:0.0.119"
     "@typescript-eslint/eslint-plugin": "npm:6.11.0"
     "@typescript-eslint/parser": "npm:6.11.0"
     "@web/dev-server": "npm:0.4.1"
@@ -709,6 +710,13 @@ __metadata:
   version: 2.0.6
   resolution: "@types/trusted-types@npm:2.0.6"
   checksum: 8d942c25bfabd89463170e22f0b3312b776885735a9c259495266b90c590f040b2112cb25e05cc2dee6e397301597b979b8ea8b0d10f2232adf38c542a16324b
+  languageName: node
+  linkType: hard
+
+"@types/web@npm:0.0.119":
+  version: 0.0.119
+  resolution: "@types/web@npm:0.0.119"
+  checksum: 8ad004ff42e3fe0904c0aed052aa413ad2c03face6ff32f40c9fce39427bc184d3b2cc9aebf4bc5696158cd12e2ab14c652b175f77c124dd025ddb3e89e3cfd3
   languageName: node
   linkType: hard
 

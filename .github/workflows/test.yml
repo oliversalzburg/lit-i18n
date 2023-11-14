@@ -31,8 +31,8 @@ jobs:
       #  run: yarn lint:tsc
       #- name: Lint Prettier
       #  run: yarn lint:prettier
-      #- name: Build
-      #  run: yarn build
+      - name: Build
+        run: yarn build
 
       - name: Test
         run: yarn test:ci

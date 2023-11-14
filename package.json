@@ -17,26 +17,31 @@
     "url": "https://github.com/oliversalzburg/lit-i18n/issues"
   },
   "type": "module",
-  "main": "index.js",
-  "files": [
-    "/dist/",
-    "/src/",
-    "/index.js"
-  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./lib": "./lib/index.js",
+    "./lib/*": "./lib/*.js",
+    "./lib/*.js": "./lib/*.js"
+  },
   "scripts": {
-    "generateDeclarations": "node ./node_modules/typescript/bin/tsc -p d.tsconfig.json",
+    "build": "yarn run build:tsc",
+    "build:tsc": "tsc",
+    "build:tsc:watch": "tsc --watch",
     "lint": "yarn run lint:all",
     "lint:all": "yarn run lint:eslint && yarn run lint:prettier && yarn run lint:tsc",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
     "lint:tsc": "tsc --noEmit",
-    "prepublishOnly": "npm run generateDeclarations",
+    "npm:publish": "npm publish",
+    "npm:publish:major": "npm version major && npm publish",
+    "npm:publish:minor": "npm version minor && npm publish",
+    "npm:publish:patch": "npm version patch && npm publish",
     "start": "web-dev-server --node-resolve --preserve-symlinks",
-    "test": "npm run test:watch",
-    "test:ci": "npm run test:unit",
-    "test:coverage": "npm run test:unit -- --coverage",
+    "test": "yarn run test:watch",
+    "test:ci": "yarn run test:unit",
+    "test:coverage": "yarn run test:unit -- --coverage",
     "test:unit": "web-test-runner \"test/unit/**/*.js\" --node-resolve --preserve-symlinks",
-    "test:watch": "npm run test:unit -- --watch"
+    "test:watch": "yarn run test:unit -- --watch"
   },
   "dependencies": {
     "lit-html": "3.0.2"
@@ -48,6 +53,7 @@
     "@esm-bundle/chai": "4.3.4",
     "@types/eslint": "8.44.7",
     "@types/node": "20.9.0",
+    "@types/web": "0.0.119",
     "@typescript-eslint/eslint-plugin": "6.11.0",
     "@typescript-eslint/parser": "6.11.0",
     "@web/dev-server": "0.4.1",
@@ -62,10 +68,10 @@
   },
   "keywords": [
     "component",
-    "i18n",
+    "html",
     "i18n",
     "i18next",
-    "lit html i18n",
+    "lit",
     "lit-element",
     "lit-html",
     "web"
