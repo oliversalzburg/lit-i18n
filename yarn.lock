@@ -1509,7 +1509,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esm-bundle/chai@npm:^4.3.4-fix.0":
+"@esm-bundle/chai@npm:4.3.4":
   version: 4.3.4
   resolution: "@esm-bundle/chai@npm:4.3.4"
   dependencies:
@@ -1654,16 +1654,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@oliversalzburg/lit-i18n@workspace:."
   dependencies:
-    "@esm-bundle/chai": "npm:^4.3.4-fix.0"
-    "@web/dev-server": "npm:^0.1.25"
-    "@web/test-runner": "npm:^0.13.20"
-    dev-lib-colscott: "npm:^2.0.0"
+    "@esm-bundle/chai": "npm:4.3.4"
+    "@web/dev-server": "npm:0.1.38"
+    "@web/test-runner": "npm:0.13.31"
+    dev-lib-colscott: "npm:2.1.1"
     i18next: "npm:21.3.3"
-    lit-html: "npm:^2.0.1"
+    lit-html: "npm:2.8.0"
     prettier: "npm:3.1.0"
     prettier-package-json: "npm:2.8.0"
     prettier-plugin-organize-imports: "npm:3.2.4"
-    typescript: "npm:^4.0.2"
+    typescript: "npm:4.9.5"
   peerDependencies:
     i18next: ^21.3.3
   languageName: unknown
@@ -2420,7 +2420,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@web/dev-server@npm:^0.1.25, @web/dev-server@npm:^0.1.32":
+"@web/dev-server@npm:0.1.38, @web/dev-server@npm:^0.1.32":
   version: 0.1.38
   resolution: "@web/dev-server@npm:0.1.38"
   dependencies:
@@ -2533,7 +2533,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@web/test-runner@npm:^0.13.20":
+"@web/test-runner@npm:0.13.31":
   version: 0.13.31
   resolution: "@web/test-runner@npm:0.13.31"
   dependencies:
@@ -3981,7 +3981,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dev-lib-colscott@npm:^2.0.0":
+"dev-lib-colscott@npm:2.1.1":
   version: 2.1.1
   resolution: "dev-lib-colscott@npm:2.1.1"
   dependencies:
@@ -6608,7 +6608,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-html@npm:^2.0.1":
+"lit-html@npm:2.8.0":
   version: 2.8.0
   resolution: "lit-html@npm:2.8.0"
   dependencies:
@@ -9500,6 +9500,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:4.9.5":
+  version: 4.9.5
+  resolution: "typescript@npm:4.9.5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 5f6cad2e728a8a063521328e612d7876e12f0d8a8390d3b3aaa452a6a65e24e9ac8ea22beb72a924fd96ea0a49ea63bb4e251fb922b12eedfb7f7a26475e5c56
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^3.9.3":
   version: 3.9.10
   resolution: "typescript@npm:3.9.10"
@@ -9510,13 +9520,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.0.2":
+"typescript@patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>":
   version: 4.9.5
-  resolution: "typescript@npm:4.9.5"
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 5f6cad2e728a8a063521328e612d7876e12f0d8a8390d3b3aaa452a6a65e24e9ac8ea22beb72a924fd96ea0a49ea63bb4e251fb922b12eedfb7f7a26475e5c56
+  checksum: e3333f887c6829dfe0ab6c1dbe0dd1e3e2aeb56c66460cb85c5440c566f900c833d370ca34eb47558c0c69e78ced4bfe09b8f4f98b6de7afed9b84b8d1dd06a1
   languageName: node
   linkType: hard
 
@@ -9527,16 +9537,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 9041fb3886e7d6a560f985227b8c941d17a750f2edccb5f9b3a15a2480574654d9be803ad4a14aabcc2f2553c4d272a25fd698a7c42692f03f66b009fb46883c
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A^4.0.2#optional!builtin<compat/typescript>":
-  version: 4.9.5
-  resolution: "typescript@patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: e3333f887c6829dfe0ab6c1dbe0dd1e3e2aeb56c66460cb85c5440c566f900c833d370ca34eb47558c0c69e78ced4bfe09b8f4f98b6de7afed9b84b8d1dd06a1
   languageName: node
   linkType: hard
 
