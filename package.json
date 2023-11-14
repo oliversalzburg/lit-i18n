@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@oliversalzburg/lit-i18n",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "lit-element based i18n solution backed by i18next",
   "license": "MIT",
   "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
