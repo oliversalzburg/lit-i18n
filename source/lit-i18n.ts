@@ -1,7 +1,7 @@
 import { i18n } from "i18next";
 import { html, noChange, render, svg } from "lit-html";
 import { AsyncDirective, directive } from "lit-html/async-directive.js";
-import { Part, PartInfo, PartType } from "lit-html/directive.js";
+import { PartInfo } from "lit-html/directive.js";
 
 export { html, svg, render };
 
@@ -134,32 +134,6 @@ class TranslateWhen extends TranslateBase {
     return noChange;
   }
 }
-
-const isConnected = (part: Part): boolean => {
-  if (part.type === PartType.ATTRIBUTE) return part.element.isConnected;
-  if (part.type === PartType.CHILD) return part.parentNode.isConnected;
-  if (part.type === PartType.PROPERTY) return part.element.isConnected;
-  if (part.type === PartType.BOOLEAN_ATTRIBUTE) return part.element.isConnected;
-  if (part.type === PartType.EVENT) return part.element.isConnected;
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-  if (part.type === PartType.ELEMENT) return part.element.isConnected;
-  throw new Error("Unsupported Part");
-};
-
-/**
- * Removes parts that are no longer connected.
- * Called internally on a timer but can also be called manually.
- */
-export const registryCleanup = () => {
-  registry.forEach((details, part: TranslateBase) => {
-    if (!part.isConnected) {
-      registry.delete(part);
-    }
-  });
-};
-
-/** lit-html does not seem to fire life cycle hook for part disconnected, we need to record and manage parts ourselves. */
-setInterval(registryCleanup, 10000);
 
 /**
  * The translate directive
