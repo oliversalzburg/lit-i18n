@@ -1,61 +1,35 @@
 {
-    "$schema": "https://json.schemastore.org/package.json",
-    "name": "@oliversalzburg/lit-i18n",
-    "version": "3.0.2",
-    "description": "lit-element based i18n solution backed by i18next",
-    "main": "index.js",
-    "type": "module",
-    "files": [
-        "/index.js",
-        "/src/",
-        "/dist/"
-    ],
-    "scripts": {
-        "start": "web-dev-server --node-resolve --preserve-symlinks",
-        "test": "npm run test:watch",
-        "test:ci": "npm run test:unit",
-        "test:coverage": "npm run test:unit -- --coverage",
-        "test:watch": "npm run test:unit -- --watch",
-        "test:unit": "web-test-runner \"test/unit/**/*.js\" --node-resolve --preserve-symlinks",
-        "prepublishOnly": "npm run generateDeclarations",
-        "generateDeclarations": "node ./node_modules/typescript/bin/tsc -p d.tsconfig.json"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/oliversalzburg/lit-i18n.git"
-    },
-    "keywords": [
-        "i18n",
-        "lit-element",
-        "lit-html",
-        "i18n",
-        "web",
-        "component",
-        "lit html i18n",
-        "i18next"
-    ],
-    "author": "colin scott",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/oliversalzburg/lit-i18n/issues"
-    },
-    "homepage": "https://github.com/oliversalzburg/lit-i18n#readme",
-    "dependencies": {
-        "lit-html": "2.8.0"
-    },
-    "devDependencies": {
-        "@esm-bundle/chai": "4.3.4",
-        "@web/dev-server": "0.1.38",
-        "@web/test-runner": "0.13.31",
-        "dev-lib-colscott": "2.1.1",
-        "i18next": "21.3.3",
-        "prettier": "3.1.0",
-        "prettier-package-json": "2.8.0",
-        "prettier-plugin-organize-imports": "3.2.4",
-        "typescript": "4.9.5"
-    },
-    "peerDependencies": {
-        "i18next": "^21.3.3"
-    },
-    "packageManager": "yarn@4.0.2"
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@oliversalzburg/lit-i18n-monorepo",
+  "version": "0.0.0",
+  "description": "lit-i18n monorepo",
+  "license": "MIT",
+  "author": "Colin Scott",
+  "homepage": "https://github.com/oliversalzburg/lit-i18n#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliversalzburg/lit-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oliversalzburg/lit-i18n/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/eslint": "8.44.7",
+    "@types/web": "0.0.119",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
+    "eslint": "8.53.0",
+    "lint-staged": "15.1.0",
+    "prettier": "3.1.0",
+    "prettier-package-json": "2.8.0",
+    "prettier-plugin-organize-imports": "3.2.4",
+    "tslib": "2.6.2",
+    "typescript": "4.9.5"
+  },
+  "packageManager": "yarn@4.0.2"
 }

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@oliversalzburg/lit-i18n",
+  "version": "3.0.2",
+  "description": "lit-element based i18n solution backed by i18next",
+  "license": "MIT",
+  "author": "colin scott",
+  "homepage": "https://github.com/oliversalzburg/lit-i18n#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliversalzburg/lit-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oliversalzburg/lit-i18n/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "/dist/",
+    "/source/",
+    "/index.js"
+  ],
+  "scripts": {
+    "generateDeclarations": "node ./node_modules/typescript/bin/tsc -p d.tsconfig.json",
+    "prepublishOnly": "npm run generateDeclarations",
+    "start": "web-dev-server --node-resolve --preserve-symlinks",
+    "test": "npm run test:watch",
+    "test:ci": "npm run test:unit",
+    "test:coverage": "npm run test:unit -- --coverage",
+    "test:unit": "web-test-runner \"test/unit/**/*.js\" --node-resolve --preserve-symlinks",
+    "test:watch": "npm run test:unit -- --watch"
+  },
+  "dependencies": {
+    "lit-html": "2.8.0"
+  },
+  "peerDependencies": {
+    "i18next": "^21.3.3"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "4.3.4",
+    "@web/dev-server": "0.1.38",
+    "@web/test-runner": "0.13.31",
+    "dev-lib-colscott": "2.1.1",
+    "i18next": "21.3.3",
+    "prettier": "3.1.0",
+    "prettier-package-json": "2.8.0",
+    "prettier-plugin-organize-imports": "3.2.4",
+    "typescript": "4.9.5"
+  },
+  "keywords": [
+    "component",
+    "i18n",
+    "i18n",
+    "i18next",
+    "lit html i18n",
+    "lit-element",
+    "lit-html",
+    "web"
+  ],
+  "packageManager": "yarn@4.0.2"
+}
