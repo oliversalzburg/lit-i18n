@@ -41,7 +41,7 @@
     },
     "homepage": "https://github.com/oliversalzburg/lit-i18n#readme",
     "dependencies": {
-        "lit-html": "2.8.0"
+        "lit-html": "3.0.2"
     },
     "devDependencies": {
         "@esm-bundle/chai": "4.3.4",
