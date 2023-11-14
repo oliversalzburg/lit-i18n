@@ -45,7 +45,7 @@
     },
     "devDependencies": {
         "@esm-bundle/chai": "4.3.4",
-        "@web/dev-server": "0.1.38",
+        "@web/dev-server": "0.4.0",
         "@web/test-runner": "0.13.31",
         "dev-lib-colscott": "2.1.1",
         "i18next": "21.3.3",
