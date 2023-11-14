@@ -1,0 +1,13 @@
+example/
+lib/tsconfig.tsbuildinfo
+node_modules/
+source/
+test/
+.*
+*.config.js
+constraints.pro
+package.tgz
+renovate.json
+server.cjs
+tsconfig.json
+yarn.lock

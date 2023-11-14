@@ -32,7 +32,7 @@ module.exports = {
         "plugin:@typescript-eslint/stylistic-type-checked",
       ],
       parserOptions: {
-        project: ["./tsconfig.eslint.json"],
+        project: ["./tsconfig.json"],
         tsconfigRootDir: __dirname,
       },
       plugins: ["@typescript-eslint"],
