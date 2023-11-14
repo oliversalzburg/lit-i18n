@@ -51,7 +51,7 @@
     "@typescript-eslint/eslint-plugin": "6.11.0",
     "@typescript-eslint/parser": "6.11.0",
     "@web/dev-server": "0.4.1",
-    "@web/test-runner": "0.13.31",
+    "@web/test-runner": "0.18.0",
     "eslint": "8.53.0",
     "i18next": "21.3.3",
     "lint-staged": "15.1.0",
