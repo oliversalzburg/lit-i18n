@@ -1,55 +1,74 @@
 {
-  "name": "lit-i18n",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@oliversalzburg/lit-i18n",
   "version": "3.0.2",
   "description": "lit-element based i18n solution backed by i18next",
+  "license": "MIT",
+  "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
+  "contributors": [
+    "Colin Scott"
+  ],
+  "homepage": "https://github.com/oliversalzburg/lit-i18n#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliversalzburg/lit-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oliversalzburg/lit-i18n/issues"
+  },
+  "type": "module",
   "main": "index.js",
   "files": [
-    "/index.js",
+    "/dist/",
     "/src/",
-    "/dist/"
+    "/index.js"
   ],
   "scripts": {
+    "generateDeclarations": "node ./node_modules/typescript/bin/tsc -p d.tsconfig.json",
+    "lint": "yarn run lint:all",
+    "lint:all": "yarn run lint:eslint && yarn run lint:prettier && yarn run lint:tsc",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "lint:tsc": "tsc --noEmit",
+    "prepublishOnly": "npm run generateDeclarations",
     "start": "web-dev-server --node-resolve --preserve-symlinks",
     "test": "npm run test:watch",
     "test:ci": "npm run test:unit",
     "test:coverage": "npm run test:unit -- --coverage",
-    "test:watch": "npm run test:unit -- --watch",
     "test:unit": "web-test-runner \"test/unit/**/*.js\" --node-resolve --preserve-symlinks",
-    "prepublishOnly": "npm run generateDeclarations",
-    "generateDeclarations": "node ./node_modules/typescript/bin/tsc -p d.tsconfig.json"
+    "test:watch": "npm run test:unit -- --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/colscott/lit-i18n.git"
-  },
-  "keywords": [
-    "i18n",
-    "lit-element",
-    "lit-html",
-    "i18n",
-    "web",
-    "component",
-    "lit html i18n",
-    "i18next"
-  ],
-  "author": "colin scott",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/colscott/lit-i18n/issues"
-  },
-  "homepage": "https://github.com/colscott/lit-i18n#readme",
   "dependencies": {
-    "lit-html": "^2.0.1"
-  },
-  "devDependencies": {
-    "@esm-bundle/chai": "^4.3.4-fix.0",
-    "@web/dev-server": "^0.1.25",
-    "@web/test-runner": "^0.13.20",
-    "dev-lib-colscott": "^2.0.0",
-    "i18next": "^21.3.3",
-    "typescript": "^4.0.2"
+    "lit-html": "2.8.0"
   },
   "peerDependencies": {
     "i18next": "^21.3.3"
-  }
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "4.3.4",
+    "@types/eslint": "8.44.7",
+    "@types/node": "20.9.0",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
+    "@web/dev-server": "0.1.38",
+    "@web/test-runner": "0.13.31",
+    "eslint": "8.53.0",
+    "i18next": "21.3.3",
+    "lint-staged": "15.1.0",
+    "prettier": "3.1.0",
+    "prettier-package-json": "2.8.0",
+    "prettier-plugin-organize-imports": "3.2.4",
+    "typescript": "4.9.5"
+  },
+  "keywords": [
+    "component",
+    "i18n",
+    "i18n",
+    "i18next",
+    "lit html i18n",
+    "lit-element",
+    "lit-html",
+    "web"
+  ],
+  "packageManager": "yarn@4.0.2"
 }
