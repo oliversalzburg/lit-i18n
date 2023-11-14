@@ -6,5 +6,6 @@
 !.yarn/versions
 .pnp.*
 
-node_modules
+lib/
+node_modules/
 tsconfig.tsbuildinfo
